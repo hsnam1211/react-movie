@@ -1,0 +1,128 @@
+body {
+    margin: 0px;
+    background-color: #302F2F;
+    
+}
+.footer {
+    height: 500px;
+    content: '';
+}
+.wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.container {
+    position: relative;
+    min-width: 1200px;
+    width: 60%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.movie__detail_title_container {
+    position: absolute;
+    top: -167px;
+    left: 450px;
+}
+
+.movie__detail_background {
+    width: 100%;
+    height: 700px;
+    object-fit:cover;
+    /* background-size: cover */
+}
+.movie__detail_background_gradient {
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    top: 400px;
+    background-image: linear-gradient(to top, #302F2F, transparent);
+}
+.movie__detail_img {
+    position: absolute;
+    top: -390px;
+    width: 300px;
+    left: 80px;
+    box-shadow: 0px 0px 10px #000;
+    border-radius: 10px;
+}
+.movie__detail_container {
+    position:relative;
+}
+.movie__detail_title {
+    color: white;
+    font-size: 50px;
+    margin: 0px;
+}
+.movie__detail_title_long {
+    color: gray;
+    font-size: 25px;
+}
+.movie__detail_runtime {
+    color: darkgray;
+    position: absolute;
+    left: 455px;
+    font-size: 17px;
+    top: 11px;
+}
+.movie__detail_thums_rating {
+    position: absolute;
+    top: 22px;
+}
+.movie__detail_rating {
+    color: #A91A1A;
+    position: absolute;
+    left: 450px;
+    font-size: 26px;
+    top: 9px;
+    font-weight: bold;
+}
+.movie__detail_star{
+    left: 34px;
+    top: 4px;
+    position: absolute;
+    font-weight: bold;
+}
+.movie__detail_genres {
+    left: 455px;
+    top: -13px;
+    position: absolute;
+}
+.movie__detail_genres_text{
+    color: gray;
+}
+.movie__detail_thums {
+    color: #86858E;
+    position: absolute;
+    left: 530px;
+    font-size: 26px;
+    top: 9px;
+    font-weight: bold;
+}
+.movie__detail_thums_text {
+    left: 34px;
+    top: 5px;
+    position: absolute;
+    font-weight: bold;
+}
+.movie__detail_description_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.movie__detail_description_container {
+    border-radius: 10px;
+    background-color: #575353;
+    padding: 30px;
+    position: relative;
+    top: 116px;
+    width: 82%;
+}
+.movie__detail_description_intro {
+    color: white;
+    font-size: 20px;
+}

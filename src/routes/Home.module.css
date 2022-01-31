@@ -1,0 +1,28 @@
+body {
+    margin: 0px;
+    background-color: #302F2F;
+}
+
+.wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.container {
+    min-width: 1200px;
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.movie__list {
+    width: 40%;
+    background-color: #F5F3F3;
+    border-radius: 10px;
+    height: 226px;
+    margin: 50px 40px 40px 0px;
+    padding: 19px;
+}

@@ -1,0 +1,33 @@
+.movie__content {
+    position: relative;
+}
+.movie__cover_img {
+    position: absolute;
+    left: 10px;
+    top: -56px;
+    width: 130px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000;
+}
+.movie__title {
+    position: absolute;
+    left: 180px;
+    top: -10px;
+    font-size: 20px;
+
+}
+.movie__summary {
+    position: absolute;
+    left: 180px;
+    top: 92px;
+}
+.movie__genres {
+    position: absolute;
+    top: 60px;
+    left: 180px;
+}
+.movie__genres_word {
+    /* margin-right: 10px; */
+    color: gray;
+}
