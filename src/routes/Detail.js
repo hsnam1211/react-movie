@@ -39,35 +39,37 @@ function Detail() {
                 {loading ? 
                     null: 
                     <>
-                        <img className={styles.movie__detail_img} src={movieDetail.data.movie.medium_cover_image}></img>
-                        <div className={styles.movie__detail_container}>
+                        <span>
+                            <img className={styles.movie__detail_img} src={movieDetail.data.movie.medium_cover_image}></img>
+                        </span>
+                        <span className={styles.movie__detail_container}>
                             <div className={styles.movie__detail_title_container}>
                                 <h2 className={styles.movie__detail_title}>{movieDetail.data.movie.title}</h2>
                                 <div className={styles.movie__detail_title_long}>{movieDetail.data.movie.title_long}</div>
                             </div>
+                            <div className={styles.movie__detail_genres}>
+                                {movieDetail.data.movie.genres.map((g, index) => (
+                                    index == 0 ? 
+                                        <span className={styles.movie__detail_genres_text} key={g}>{g}</span>:
+                                        <span className={styles.movie__detail_genres_text} key={g}> ・ {g}</span>
+                                ))}
+                            </div>
                             <div className={styles.movie__detail_runtime}>Runtime : {movieDetail.data.movie.runtime} minutes</div>
                             <div className={styles.movie__detail_thums_rating}>
-                                <div className={styles.movie__detail_rating}>
+                                <span className={styles.movie__detail_rating}>
                                     <Star style={{fontSize: 33}}/><span className={styles.movie__detail_star}>{movieDetail.data.movie.rating}</span>
-                                </div>
-                                <div className={styles.movie__detail_thums}>
-                                    <ThumbUp style={{fontSize: 31}}/><span className={styles.movie__detail_star}>{movieDetail.data.movie.like_count}</span>
-                                </div>
+                                </span>
+                                <span className={styles.movie__detail_thums}>
+                                    <ThumbUp style={{fontSize: 31}}/><span className={styles.movie__detail_thums_count}>{movieDetail.data.movie.like_count}</span>
+                                </span>
                             </div>
-                            <div className={styles.movie__detail_genres}>
-                            {movieDetail.data.movie.genres.map((g, index) => (
-                                index == 0 ? 
-                                    <span className={styles.movie__detail_genres_text} key={g}>{g}</span>:
-                                    <span className={styles.movie__detail_genres_text} key={g}> ・ {g}</span>
-                            ))}
+                        </span>
+                        <div className={styles.movie__detail_description_wrap}>
+                            <div className={styles.movie__detail_description_container}>
+                                <div className={styles.movie__detail_description_intro}>{movieDetail.data.movie.description_intro}</div>
                             </div>
-                            <div className={styles.movie__detail_description_wrap}>
-                                <div className={styles.movie__detail_description_container}>
-                                    <div className={styles.movie__detail_description_intro}>{movieDetail.data.movie.description_intro}</div>
-                                </div>
-                            </div>
-                            <div className={styles.footer}></div>
                         </div>
+                        <div className={styles.footer}></div>
                     </>
                 }
                 </div>
