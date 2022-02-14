@@ -24,3 +24,12 @@ body {
     margin: 50px 40px 40px 0px;
     padding: 19px;
 }
+
+.loading_indicator_wrap {
+    /* display: flex; */
+    line-height: 100vh;
+    text-align: center;
+}
+.loading_indicator {
+    vertical-align: middle;
+}

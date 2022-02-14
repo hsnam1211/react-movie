@@ -134,3 +134,11 @@ body {
     color: white;
     font-size: 20px;
 }
+.loading_indicator_wrap {
+    /* display: flex; */
+    line-height: 100vh;
+    text-align: center;
+}
+.loading_indicator {
+    vertical-align: middle;
+}

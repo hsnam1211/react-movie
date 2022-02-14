@@ -4,6 +4,8 @@ import styles from "./Detail.module.css"
 import { style } from "@mui/system";
 import Star from '@material-ui/icons/Star';
 import ThumbUp from '@material-ui/icons/ThumbUp';
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 function Detail() {
     const {id} = useParams();
@@ -27,7 +29,10 @@ function Detail() {
     return (
         <div>
             {loading ? 
-                <h1>Loading...</h1>
+                // <h1>Loading...</h1>
+                <div className={styles.loading_indicator_wrap}>
+                    <CircularProgress className={styles.loading_indicator}/>
+                </div>
                 : 
                 <>
                     <img className={styles.movie__detail_background} src={movieDetail.data.movie.background_image_original}></img>

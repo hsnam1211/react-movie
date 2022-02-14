@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie"
 import styles from "./Home.module.css"
-
+import CircularProgress from '@mui/material/CircularProgress';
 
 function Home() {
 
@@ -26,7 +26,11 @@ function Home() {
 
     return (
         <div className={styles.wrap}>
-        {loading ? <h1>Loading...</h1> : 
+        {loading ? 
+            <div className={styles.loading_indicator_wrap}>
+                <CircularProgress className={styles.loading_indicator}/>
+            </div> 
+            : 
             <div className={styles.container}>{
             movies.map((movie) => (
                 <div className={styles.movie__list} key={movie.id}>
